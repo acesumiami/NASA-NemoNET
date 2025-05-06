@@ -1,0 +1,83 @@
+# Satellite type: 'sn2' for Sentinel-2 or 'wv2' for WorldView-2
+satellite_type: 'sn2'
+
+paths:
+  coral_classes_config: 'CoralClasses.json'  
+  output_dir: '/path/to/output'                     
+
+image_set_loader:
+  train:
+    image_dir: '/path/to/TrainImages/'
+    label_dir: '/path/to/LabelImages/'
+    image_size:
+      - 256  
+      - 256  
+    image_format: 'tif'
+    label_format: 'png'
+  val:
+    image_dir: '/path/to/ValidationImages/'
+    label_dir: '/path/to/ValidationLabels/'
+    image_size:
+      - 256  
+      - 256 
+    image_format: 'tif'
+    label_format: 'png'
+
+prediction:
+  image_path: '/path/to/test_image.tif'     
+  label_path: '/path/to/test_label.png'     
+  patch_size: 256                           
+
+training:
+  batch_size: 8
+  epochs: 200
+  optimizer:
+    name: 'adam'
+    learning_rate: 0.0001
+  callbacks:
+    early_stopping:
+      monitor: 'val_loss'
+      patience: 10
+    reduce_lr:
+      monitor: 'val_loss'
+      factor: 0.5
+      patience: 5
+
+class_names:
+  - "Coral"
+  - "Coral Fore Reef"
+  - "Reef Crest - Coralline Algal Ridge"
+  - "Algae"
+  - "Seagrass"
+  - "Sediment & Rubble"
+  - "Terrestrial Vegetated"
+  - "Mangroves"
+  - "Deep Water"
+  - "Terrestrial Other & No Data"
+  - "Clouds"
+
+class_hex_colors:
+  - "#ff6347"  # Coral
+  - "#ffa500"  # Coral Fore Reef
+  - "#2ca02c"  # Reef Crest - Coralline Algal Ridge
+  - "#17becf"  # Algae
+  - "#32cd32"  # Seagrass
+  - "#f5deb3"  # Sediment & Rubble
+  - "#8b4513"  # Terrestrial Vegetated
+  - "#e377c2"  # Mangroves
+  - "#00008b"  # Deep Water
+  - "#808080"  # Terrestrial Other & No Data
+  - "#ffffff"  # Clouds
+
+label_mapping:
+  1: 0   # Coral
+  2: 1   # Coral Fore Reef
+  3: 2   # Reef Crest - Coralline Algal Ridge
+  4: 3   # Algae
+  5: 4   # Seagrass
+  6: 5   # Sediment & Rubble
+  7: 6   # Terrestrial Vegetated
+  8: 7   # Mangroves
+  9: 8   # Deep Water
+  10: 9  # Terrestrial Other & No Data
+  11: 10 # Clouds
