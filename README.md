@@ -51,6 +51,22 @@ data/
     └── …
 ```
 
+Labels should be RGB images where each class is represented by a specific color:
+
+| Class | Name | Hex Color |
+|-------|------|-----------|
+| 0 | Coral | #ff6347 |
+| 1 | Coral Fore Reef | #ffa500 |
+| 2 | Reef Crest - Coralline Algal Ridge | #2ca02c |
+| 3 | Algae | #17becf |
+| 4 | Seagrassae | #32cd32 |
+| 5 | Sediment & Rubble | #f5deb3 |
+| 6 | Terrestrial Vegetated | #8b4513 |
+| 7 | Mangroves | #e377c2 |
+| 8 | Deep Water | #00008b |
+| 9 | Terrestrial Other & No Data | #808080 |
+| 10 | Clouds | #ffffff |
+
 ## Training
 To train a new model:
 
