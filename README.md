@@ -30,24 +30,25 @@ image_set_loader:
 ## Directory Structure
 For optimal performance, organize your data like this:
 data/
+
 ├── TrainImages/
-│   ├── Class1/
-│   │   ├── image1.tif
-│   │   ├── image2.tif
-│   │   └── …
-│   ├── Class2/
-│   └── …
+│ ├── Class1/
+│ │ ├── image1.tif
+│ │ ├── image2.tif
+│ │ └── …
+│ ├── Class2/
+│ └── …
 ├── LabelImages/
-│   ├── Class1/
-│   │   ├── image1.png
-│   │   ├── image2.png
-│   │   └── …
-│   ├── Class2/
-│   └── …
+│ ├── Class1/
+│ │ ├── image1.png
+│ │ ├── image2.png
+│ │ └── …
+│ ├── Class2/
+│ └── …
 ├── ValidationImages/
-│   └── …
+│ └── …
 └── ValidationLabels/
-    └── …
+└── …
 
 
 ## Training
