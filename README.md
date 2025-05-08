@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 ## Configuration
-Edit the 'config.yml' file to set up your project:
+Edit the 'config.yml' file to set up the project:
 
 ```
 satellite_type: 'sn2'
@@ -28,7 +28,7 @@ image_set_loader:
 ```
 
 ## Directory Structure
-For optimal performance, organize your data like this:
+For optimal performance, organize the data like this:
 ```
 data/
 ├── TrainImages/
